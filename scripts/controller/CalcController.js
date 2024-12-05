@@ -49,9 +49,10 @@ class CalcController {
       if (this.isOperator(value)) {
         //troca operador
         this._operation[this._operation.length - 1] = value;
-      } else {
+      } else if (isNaN(value)) {
         //outra coisa
         console.log(value);
+      } else {
       }
     } else {
       let newValue = this.getLastOperation().toString() + value.toString();
